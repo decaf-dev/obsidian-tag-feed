@@ -63,7 +63,7 @@ export default class TaggedBlocks extends Plugin {
 								.trim();
 
 							box = container.createDiv();
-							box.style.backgroundColor = "#f6f7f6";
+							box.style.backgroundColor = "var(--color-base-20)";
 							box.style.padding = "5px 20px 5px 20px";
 
 							MarkdownRenderer.renderMarkdown(
