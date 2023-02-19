@@ -13,7 +13,7 @@ export class BlockRenderer extends MarkdownRenderChild {
 	constructor(app: App, source: string, containerEl: HTMLElement) {
 		super(containerEl);
 		this.app = app;
-		this.source = source;
+		this.source = source.trim();
 	}
 
 	async onload() {
