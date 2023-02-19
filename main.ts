@@ -52,17 +52,16 @@ export default class TaggedBlocks extends Plugin {
 						for (let j = 0; j < blocks.length; j++) {
 							const block = blocks[j];
 							const content = lines
-								.map((line, k) => {
+								.filter((_line, k) => {
 									if (
 										k >= block.lineStart &&
 										k <= block.lineEnd
 									) {
-										return line;
+										return true;
 									}
-									return "";
+									return false;
 								})
-								.join("\n")
-								.trim();
+								.join("\n");
 
 							box = container.createDiv();
 							box.style.backgroundColor = "var(--color-base-20)";
@@ -78,6 +77,8 @@ export default class TaggedBlocks extends Plugin {
 								new Component()
 							);
 
+							console.log(content);
+
 							await MarkdownRenderer.renderMarkdown(
 								content,
 								box,
@@ -85,8 +86,8 @@ export default class TaggedBlocks extends Plugin {
 								new Component()
 							);
 
-							for (let l = 0; l < box.children.length; l++) {
-								const child = box.children[l] as HTMLElement;
+							for (let j = 0; j < box.children.length; j++) {
+								const child = box.children[j] as HTMLElement;
 								const tagName = child.tagName.toLowerCase();
 								if (tagName == "ul") {
 									child.style.paddingLeft = "20px";
