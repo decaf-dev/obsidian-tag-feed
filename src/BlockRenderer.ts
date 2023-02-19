@@ -4,7 +4,7 @@ import {
 	MarkdownRenderChild,
 	MarkdownRenderer,
 } from "obsidian";
-import { findBlocks, removeTabCharacters } from "utils";
+import { findBlocks, removeTabCharacters } from "src/utils";
 
 export class BlockRenderer extends MarkdownRenderChild {
 	app: App;

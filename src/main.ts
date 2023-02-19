@@ -1,5 +1,5 @@
 import { App, Plugin, PluginSettingTab, Setting } from "obsidian";
-import { BlockRenderer } from "BlockRenderer";
+import { BlockRenderer } from "src/BlockRenderer";
 
 // Remember to rename these classes and interfaces!
 
