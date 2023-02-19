@@ -35,9 +35,12 @@ export class BlockRenderer extends MarkdownRenderChild {
 		container.style.flexDirection = "column";
 		container.style.rowGap = "20px";
 
-		const files = app.vault.getMarkdownFiles();
-		console.log(tag);
-		console.log(modifiedTime);
+		let files = app.vault.getMarkdownFiles();
+
+		//Sort files based on modified time
+		files.sort((a, b) => {
+			return b.stat.mtime - a.stat.mtime;
+		});
 
 		let found = false;
 		for (let i = 0; i < files.length; i++) {
