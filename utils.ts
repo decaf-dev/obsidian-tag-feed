@@ -3,13 +3,23 @@ interface IBlock {
 	lineEnd: number;
 }
 
-const countTabCharacters = (text: string) => {
-	var count = 0;
-	var index = 0;
-	while (text.charAt(index++) === "\t") {
-		count++;
+const countTabCharacters = (text: string, count = 0): number => {
+	if (text.charAt(0) === "\t") {
+		return countTabCharacters(text.substring(1), count + 1);
 	}
 	return count;
+};
+
+export const removeTabCharacters = (
+	text: string,
+	desiredTabs: number
+): string => {
+	const numTabs = countTabCharacters(text);
+	if (numTabs > desiredTabs) {
+		//Remove one of the tabs and call the function again
+		return removeTabCharacters(text.substring(1), desiredTabs);
+	}
+	return text;
 };
 
 export const findBlocks = (tag: string, lines: string[]) => {
