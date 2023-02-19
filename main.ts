@@ -6,7 +6,7 @@ import {
 	PluginSettingTab,
 	Setting,
 } from "obsidian";
-import { findBlocks } from "utils";
+import { findBlocks, removeTabCharacters } from "utils";
 
 // Remember to rename these classes and interfaces!
 
@@ -60,6 +60,20 @@ export default class TaggedBlocks extends Plugin {
 										return true;
 									}
 									return false;
+								})
+								.map((line, i) => {
+									//Since we can display sub-lists, the number of tabs will be off depending
+									//on what level of the list has a tag.
+									//For example, if the 2nd list item has a tag, then it will have 1 tab.
+									//- Bullet 1
+									//	- Bullet 2 #tag
+									//
+									//We then will then render "	- Bullet 2 #tag"
+									//In order for to be rendered properly by the renderMarkdown function, we should
+									//remove the tab.
+									//
+									//The number of tabs to display should match the index of the number of line.
+									return removeTabCharacters(line, i);
 								})
 								.join("\n");
 
