@@ -48,7 +48,9 @@ export default class TaggedBlocks extends Plugin {
 						if (blocks.length !== 0) {
 							found = true;
 						}
-						blocks.forEach((block, j) => {
+
+						for (let j = 0; j < blocks.length; j++) {
+							const block = blocks[j];
 							const content = lines
 								.map((line, k) => {
 									if (
@@ -64,22 +66,35 @@ export default class TaggedBlocks extends Plugin {
 
 							box = container.createDiv();
 							box.style.backgroundColor = "var(--color-base-20)";
-							box.style.padding = "5px 20px 5px 20px";
+							box.style.padding = "10px 20px 10px 20px";
+							box.style.display = "flex";
+							box.style.flexDirection = "column";
+							box.style.rowGap = "5px";
 
-							MarkdownRenderer.renderMarkdown(
+							await MarkdownRenderer.renderMarkdown(
 								"[[" + path.split(".md")[0] + "]]",
 								box,
 								file.path,
 								new Component()
 							);
 
-							MarkdownRenderer.renderMarkdown(
+							await MarkdownRenderer.renderMarkdown(
 								content,
 								box,
 								file.path,
 								new Component()
 							);
-						});
+
+							for (let l = 0; l < box.children.length; l++) {
+								const child = box.children[l] as HTMLElement;
+								const tagName = child.tagName.toLowerCase();
+								if (tagName == "ul") {
+									child.style.paddingLeft = "20px";
+								}
+								child.style.marginTop = "0px";
+								child.style.marginBottom = "0px";
+							}
+						}
 					}
 					if (!found) {
 						el.createEl("div", {
