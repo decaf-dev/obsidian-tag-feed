@@ -37,7 +37,7 @@ export default class TaggedBlocks extends Plugin {
 					let found = false;
 					for (let i = 0; i < files.length; i++) {
 						const file = files[i];
-						const { path } = file;
+						const { name, path } = file;
 						const fileContent = await this.app.vault.cachedRead(
 							file
 						);
@@ -85,9 +85,9 @@ export default class TaggedBlocks extends Plugin {
 							box.style.rowGap = "5px";
 
 							await MarkdownRenderer.renderMarkdown(
-								"[[" + path.split(".md")[0] + "]]",
+								"[[" + name.split(".md")[0] + "]]",
 								box,
-								file.path,
+								path,
 								new Component()
 							);
 
@@ -96,7 +96,7 @@ export default class TaggedBlocks extends Plugin {
 							await MarkdownRenderer.renderMarkdown(
 								content,
 								box,
-								file.path,
+								path,
 								new Component()
 							);
 
