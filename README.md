@@ -26,11 +26,13 @@ tag: feedback
 ```
 ````
 
+This will display a feed for the #feedback tag
+
 ### Time
 
 Specify a modification time to filter by
 
--   `time: <1-day>|<1-week>|<1-month>`
+-   `time: <x-day>|<x-week>|<x-month>`
 
 Example:
 
@@ -40,6 +42,8 @@ tag: feedback
 time: 3-weeks
 ```
 ````
+
+This will display a feed for the #feedback tag, 3 weeks from the current date
 
 ## Author
 
