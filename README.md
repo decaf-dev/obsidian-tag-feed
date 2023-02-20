@@ -1,16 +1,16 @@
 # Obsidian Tag Feed
 
-<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png" width="400" />
+<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png" width="500" />
 
-<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png" width="400" />
+<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png" width="500" />
 
 ## About
 
-This plugin allows you to display a feed of your recently tagged blocks of text. It is similar to the Dataview plugin and Obsidian embedded queries, however it uses a UI display that is more like Logseq linked references for tags.
+This plugin allows you to display a feed of your recently tagged blocks of text. It is similar to the Dataview plugin and Obsidian embedded queries, however it uses a UI display that is more like Logseq's linked references.
 
 ## Usage
 
-The feed uses a frontmatter-like syntax in order to render.
+The feed uses a frontmatter syntax in order to render.
 
 ### Tag
 
