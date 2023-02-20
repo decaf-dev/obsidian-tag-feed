@@ -26,7 +26,7 @@ tag: feedback
 ```
 ````
 
-This will display a feed for the #feedback tag
+This will display a feed for the #feedback tag, with no time constraint.
 
 ### Time
 
@@ -43,7 +43,7 @@ time: 3-weeks
 ```
 ````
 
-This will display a feed for the #feedback tag, 3 weeks from the current date
+This will display a feed for the #feedback tag, pulling notes that have been modified up to 3 weeks back
 
 ## Author
 
