@@ -1,12 +1,15 @@
-# Obsidian Tagged Blocks
+# Obsidian Tag Feed
+
+![Screenshot](https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png)
+![Screenshot](https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png)
 
 ## About
 
-This plugin allows you to view all blocks that have a specific tag.
+This plugin allows you to display a feed of your recently tagged blocks of text. It is similar to the Dataview plugin and Obsidian embedded queries, however it uses a UI display that is more like Logseq linked references for tags.
 
 ## Usage
 
-Tagged Blocks uses a frontmatter-like syntax in order to render.
+The feed uses a frontmatter-like syntax in order to render.
 
 ### Tag
 
@@ -17,7 +20,7 @@ Specify a tag to render
 Example:
 
 ````
-```tagged-blocks
+```tag-feed
 tag: feedback
 ```
 ````
@@ -31,7 +34,7 @@ Specify a modification time to filter by
 Example:
 
 ````
-```tagged-blocks
+```tag-feed
 tag: feedback
 time: 3-weeks
 ```
