@@ -1,10 +1,10 @@
 import { App, PluginSettingTab } from "obsidian";
-import TaggedBlocks from "./main";
+import TagFeed from "./main";
 
 export class SettingTab extends PluginSettingTab {
-	plugin: TaggedBlocks;
+	plugin: TagFeed;
 
-	constructor(app: App, plugin: TaggedBlocks) {
+	constructor(app: App, plugin: TagFeed) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

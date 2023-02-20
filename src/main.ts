@@ -1,22 +1,22 @@
 import { Plugin } from "obsidian";
 import { BlockRenderer } from "src/BlockRenderer";
 
-interface TaggedBlocksSettings {
+interface TagFeedSettings {
 	mySetting: string;
 }
 
-const DEFAULT_SETTINGS: TaggedBlocksSettings = {
+const DEFAULT_SETTINGS: TagFeedSettings = {
 	mySetting: "default",
 };
 
-export default class TaggedBlocks extends Plugin {
-	settings: TaggedBlocksSettings;
+export default class TagFeed extends Plugin {
+	settings: TagFeedSettings;
 
 	async onload() {
 		await this.loadSettings();
 
 		this.registerMarkdownCodeBlockProcessor(
-			"tagged-blocks",
+			"tag-feed",
 			async (source, el, ctx) => {
 				ctx.addChild(new BlockRenderer(this.app, source, el));
 			}

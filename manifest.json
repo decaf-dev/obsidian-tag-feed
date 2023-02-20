@@ -1,9 +1,9 @@
 {
-	"id": "obsidian-tagged-blocks",
-	"name": "Tagged Blocks",
+	"id": "obsidian-tag-feed",
+	"name": "Tag Feed",
 	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "View all blocks that have a specific tag",
+	"description": "Displays a feed of recently tagged blocks of text",
 	"author": "Trey Wallis",
 	"authorUrl": "https://github.com/trey-wallis",
 	"fundingUrl": "https://www.buymeacoffee.com/treywallis",
