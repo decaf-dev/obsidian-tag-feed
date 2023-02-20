@@ -1,7 +1,8 @@
 # Obsidian Tag Feed
 
-![Screenshot](https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png)
-![Screenshot](https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png)
+<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png" width="200" />
+
+<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png" width="200" />
 
 ## About
 
