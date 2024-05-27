@@ -1,8 +1,8 @@
 # Obsidian Tag Feed
 
-<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/reference_file.png" width="500" />
+<img src="https://raw.githubusercontent.com/decaf-dev/obsidian-tag-feed/master/.readme/reference_file.png" width="500" />
 
-<img src="https://raw.githubusercontent.com/trey-wallis/obsidian-tag-feed/master/.readme/tag_feed.png" width="500" />
+<img src="https://raw.githubusercontent.com/decaf-dev/obsidian-tag-feed/master/.readme/tag_feed.png" width="500" />
 
 ## About
 
@@ -47,4 +47,4 @@ This will display a feed for the #feedback tag, pulling notes that have been mod
 
 ## Author
 
-This project was created by <a href="https://github.com/trey-wallis">Trey Wallis</a>
+This project was created by <a href="https://github.com/decaf-dev">DecafDev</a>
